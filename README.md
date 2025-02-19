@@ -16,3 +16,13 @@ A **Node.js** application that calculates the weight of a **mild steel pressure 
 ```sh
 git clone https://github.com/your-username/vessel-weight-calculator.git
 cd vessel-weight-calculator
+2️⃣ Install Dependencies
+sh
+Copy
+Edit
+npm install
+3️⃣ Run the App
+sh
+Copy
+Edit
+node app.js
