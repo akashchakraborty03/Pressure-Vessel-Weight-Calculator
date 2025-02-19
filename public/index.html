@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vessel Weight Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset some basic elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg,rgb(198, 251, 255),rgb(141, 188, 255));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-group {
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      padding: 12px;
+      border: none;
+      background: #007BFF;
+      color: #fff;
+      font-size: 1.1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background: #0056b3;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vessel Weight Calculator</h1>
+    <form action="/calculate" method="post">
+      <div class="form-group">
+        <label for="D">Diameter (mm):</label>
+        <input type="number" name="D" id="D" step="any" required>
+      </div>
+      <div class="form-group">
+        <label for="H">Height (mm):</label>
+        <input type="number" name="H" id="H" step="any" required>
+      </div>
+      <input type="submit" value="Calculate">
+    </form>
+  </div>
+</body>
+</html>
